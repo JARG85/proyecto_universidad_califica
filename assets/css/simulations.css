@@ -1,0 +1,30 @@
+#exampleParent {
+    height: 50vh;
+}
+
+.action-btns, .controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.s-btn {
+    width: 200px;
+    margin: 5px;
+}
+
+.form-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.add-note,
+.add-person,
+.remove-note,
+.remove-person {
+    display: none;
+    margin-top: 33px;
+}

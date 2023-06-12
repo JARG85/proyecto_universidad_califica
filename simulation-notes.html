@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulacion de registro de notas</title>
+
+  <link rel="apple-touch-icon" href="assets/img/apple-icon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/templatemo.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
+
+  <!-- Load fonts style after rendering the layout styles -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+  <link rel="stylesheet" href="./assets/css/simulations.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+        CA
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between"
+        id="templatemo_main_nav">
+        <div class="flex-fill">
+          <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="simulation-notes.html">Notas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="simulation-assistance.html">asistencias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">salir</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar align-self-center d-flex">
+          <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ..." />
+              <div class="input-group-text">
+                <i class="fa fa-fw fa-search"></i>
+              </div>
+            </div>
+          </div>
+          <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+            <i class="fa fa-fw fa-search text-dark mr-2"></i>
+          </a>
+          <a class="nav-icon position-relative text-decoration-none" href="#">
+            <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+          </a>
+          <a class="nav-icon position-relative text-decoration-none" href="#">
+            <i class="fa fa-fw fa-user text-dark mr-3"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="table_notes">
+
+    <div id="exampleParent"><!-- element with dynamically added styles -->
+      <div id="example"></div>
+    </div>
+
+
+    <div class="expanControl">
+      <button id="triggerBtn" class="button button--primary">Expandir tabla</button>
+    </div>
+  </section>
+
+  <section class="controls">
+    <div class="person-contron action-btns">
+      <button type="button" class="btn btn-success s-btn" id="pre-add-person">Agregar persona</button>
+      <button type="button" class="btn btn-danger s-btn" id="pre-remove-person">Remover persona</button>
+    </div>
+    <div class="notes-control action-btns">
+      <button type="button" class="btn btn-primary s-btn" id="pre-add-note">Agregar nota</button>
+      <button type="button" class="btn btn-warning s-btn" id="pre-remove-note">Remover nota</button>
+    </div>
+  </section>
+
+  <section class="form-add">
+    <div class="add-person" id="form-add-person">
+      <form action="">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+        <button type="button" class=" btn btn-success s-btn" id="addPerson">Agregar</button>
+      </form>
+    </div>
+
+    <div class="add-note" id="form-add-note">
+      <form action="">
+        <label for="nota">Nota:</label>
+        <input type="text" name="nota" placeholder="nota" id="nota">
+        <button type="button" class=" btn btn-primary s-btn" id="addNote">Agregar</button>
+      </form>
+    </div>
+
+    <div class="remove-person" id="form-remove-person">
+      <form action="">
+        <label for="nombre">Numero de fila:</label>
+        <input type="text" name="nombre" placeholder="Ej: 3" id="numeroFila">
+        <button type="button" class=" btn btn-danger s-btn" id="removePerson">Eliminar</button>
+      </form>
+    </div>
+
+    <div class="remove-note" id="form-remove-note">
+      <form action="">
+        <label for="nota">Numero de columna:</label>
+        <input type="text" name="nota" placeholder="Ej: 5" id="numeroColumna">
+        <button type="button" class=" btn btn-warning s-btn" id="removeNote">Eliminar</button>
+      </form>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+  <script src="./assets/js/tables.js"></script>
+</body>
+
+</html>
